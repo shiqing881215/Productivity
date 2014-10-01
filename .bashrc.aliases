@@ -1,0 +1,13 @@
+#! ~/.bashrc.aliases : Add the new alias here, this file is included in .bashrc
+
+# ls command
+alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -al"
+
+# other general commands
+alias grep='grep --color=auto'
+
+# Program binary file
+alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
+alias google-chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
