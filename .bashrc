@@ -13,3 +13,10 @@ if [ -f $ALIAS_FILE ]
 then
 	. $ALIAS_FILE
 fi
+
+# All helper functions
+FUNC_FILE=~/.bashrc.funcs
+if [ -f $FUNC_FILE ]
+then
+	source $FUNC_FILE
+fi

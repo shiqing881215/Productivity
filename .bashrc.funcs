@@ -1,0 +1,21 @@
+#! /bin/sh
+
+# Return the OS 
+# Mac - 1 / Linux - 2 / Windows - 3
+getOS() {
+	if [ "$(uname)" == "Darwin" ]; then
+		echo 1
+	elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+		echo 2
+	elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+		echo 3
+	fi
+}
+
+
+# Find the file with certain content
+# $1 is the pattern you want to match in the file content
+# $2 is the directory you want to search 
+findFile() {
+	grep -r $1 $2 | awk -F: '{print $1}'  # Linux set : as the delimeter
+}
