@@ -19,3 +19,11 @@ getOS() {
 findFile() {
 	grep -r $1 $2 | awk -F: '{print $1}'  # Linux set : as the delimeter
 }
+
+# Second way to find file
+# $2 is the pattern you want to match in the file content
+# $1 is the directory you want to search 
+# Example :  findFile2 ~/test/ 'test*'
+findFile2() {
+	find $1 -name $2
+}
