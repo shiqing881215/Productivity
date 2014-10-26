@@ -11,3 +11,7 @@ alias grep='grep --color=auto'
 # Program binary file
 alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl'
 alias google-chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+# tar command
+alias tarCompress="tar -jcvf"
+alias tarExtract="tar -jxvf"
