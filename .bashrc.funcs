@@ -27,3 +27,11 @@ findFile() {
 findFile2() {
 	find $1 -name $2
 }
+
+# Find the PID of a process/service running on a certain port
+# $1 is the port that you want to search for
+# Example :  findPIDOnPort 8080
+# Smaple Output :  node 894   (first column is the process name, second is the PID)
+findPIDOnPort() {
+	lsof -Pnl +M -i | grep :$1 | awk '{print $1 " " $2}'
+}
